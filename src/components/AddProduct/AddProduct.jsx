@@ -16,9 +16,8 @@ const AddProduct = () => {
         const carRating = form.rating.value;
         const carDescription = form.carDescription.value;
 
-        const newCar ={image,brandName,carName,carType,carPrice,carRating,carDescription};
+        const newCar = { image, brandName, carName, carType, carPrice, carRating, carDescription };
         console.log(newCar);
-
 
     }
 
@@ -26,11 +25,11 @@ const AddProduct = () => {
     return (
         <section className="container mx-auto">
             <div className="text-center mb-6">
-                <h1 className="text-2xl my-6 sm:text-4xl  uppercase text-stone-500 font-medium leading-none sm:leading-tight">Add your brand</h1>
+                <h1 className="text-2xl sm:text-4xl  uppercase text-stone-500 font-medium leading-none sm:leading-tight">Add your brand</h1>
             </div>
             <div style={{ backgroundImage: `url(${formbg})` }} className="bg-cover bg-center rounded-none sm:rounded-lg my-16">
-                <div className="py-28">
-                    <h1 className='text-fuchsia-100 text-center text sm:text-3xl'>Provide all the necessary inforamtion regarding your car brand.</h1>
+                <div className="py-24">
+                    <h1 className='text-fuchsia-100 mb-12 text-center text sm:text-3xl'>Provide all the necessary inforamtion regarding your car brand.</h1>
                     <div className="bg-white border-4 border-fuchsia-800 p-14 max-w-4xl mx-auto">
                         <form onSubmit={handleAddCar}>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
@@ -99,12 +98,12 @@ const AddProduct = () => {
                                     <label className="label text-purple-700 text-lg font-medium">
                                         Product Rating
                                     </label>
-                                    <div className="rating block mt-3">
-                                        <input type="radio" name="rating" value="1" className="mask mask-star-2 bg-orange-400" />
-                                        <input type="radio" name="rating" value="2" className="mask mask-star-2 bg-orange-400" />
-                                        <input type="radio" name="rating" value="3" className="mask mask-star-2 bg-orange-400" />
-                                        <input type="radio" name="rating" value="4" className="mask mask-star-2 bg-orange-400" />
-                                        <input type="radio" name="rating" value="5" className="mask mask-star-2 bg-orange-400" />
+                                    <div className="rating space-x-1 block mt-3">
+                                        <input type="radio" name="rating" value="1" className="mask mask-star-2 bg-purple-400" />
+                                        <input type="radio" name="rating" value="2" className="mask mask-star-2 bg-purple-400" />
+                                        <input type="radio" name="rating" value="3" className="mask mask-star-2 bg-purple-400" />
+                                        <input type="radio" name="rating" value="4" className="mask mask-star-2 bg-purple-400" />
+                                        <input type="radio" name="rating" value="5" className="mask mask-star-2 bg-purple-400" />
                                     </div>
                                 </div>
                             </div>
@@ -121,7 +120,7 @@ const AddProduct = () => {
                             <div className="form-control mt-6">
                                 {/* <button className="btn btn-neutral text-lg text-fuchsia-500">Add Car Details</button> */}
                             </div>
-                            <input className="btn btn-neutral w-full" type="submit" value="Add Car Details" />
+                            <input className="btn btn-outline bg-fuchsia-900 hover:bg-purple-600 text-white w-full rounded-md" type="submit" value="Add Car Details" />
                         </form>
                     </div>
 

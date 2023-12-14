@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "brand_image": "https://i.ibb.co/NNX22MG/toyota.png",
+      "brand_name": "Toyota"
+    },
+    {
+      "id": 2,
+      "brand_image": "https://i.ibb.co/V9Z6pfQ/Honda.png",
+      "brand_name": "Honda"
+    },
+    {
+      "id": 3,
+      "brand_image": "https://i.ibb.co/JR70bLG/Mitsubishi.png",
+      "brand_name": "Mitsubishi"
+    },
+    {
+      "id": 4,
+      "brand_image": "https://i.ibb.co/Nt3Pcws/Mazda.png",
+      "brand_name": "Mazda"
+    },
+    {
+      "id": 5,
+      "brand_image": "https://i.ibb.co/LkBBdXD/Nissan1.png",
+      "brand_name": "Nissan"
+    },
+    {
+      "id": 6,
+      "brand_image": "https://i.ibb.co/pQQfSwN/Acura.png",
+      "brand_name": "Acura"
+    }
+  ]
+  

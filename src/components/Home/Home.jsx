@@ -1,8 +1,16 @@
+import { useLoaderData } from 'react-router-dom';
 import layout1 from '../../assets/layout1.jpg'
 import layout2 from '../../assets/layout2.jpg'
 import layout3 from '../../assets/layout3.jpg'
+import BrandCategory from '../BrandCategory/BrandCategory';
 
 const Home = () => {
+    const brandLists = useLoaderData();
+    // const { id } = brandLists
+    // const brandList =
+    console.log(brandLists);
+
+
     return (
         <main>
             <section>
@@ -15,6 +23,19 @@ const Home = () => {
                     <p>Experience automotive excellence at its finest with JDM Automobiles. Our curated selection of cars combines cutting-edge technology and sleek design for an unparalleled driving experience. From fuel-efficient compacts to luxurious SUVs, we have the perfect vehicle for every lifestyle. Choose JDM Automobiles for quality, reliability, and exceptional service. Elevate your drive with us - where excellence meets the road.</p>
                     <p>Look no further, We provide wide collection of japanese cars ranging from various brands.</p>
                 </div>
+                {/* 6 brand image */}
+
+                <div className="container mx-auto">
+                    <div className="mx-2">
+                    <div className="w-auto lg:w-3/4 mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {
+                            brandLists.map(brand => <BrandCategory brand={brand} key={brand.id}></BrandCategory>)
+                        }
+                    </div>
+                    </div>
+                </div>
+
+
             </section>
             {/* add 3 image layout */}
             <section className='mt-20'>

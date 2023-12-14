@@ -1,4 +1,5 @@
 import formbg from '../../assets/formbg.png'
+import Swal from 'sweetalert2'
 
 
 const AddProduct = () => {
@@ -18,6 +19,27 @@ const AddProduct = () => {
 
         const newCar = { image, brandName, carName, carType, carPrice, carRating, carDescription };
         console.log(newCar);
+
+        // add brand details to database
+        fetch('http://localhost:5000/brands', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newCar)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if(data.insertedId){
+                    Swal.fire({
+                        title: 'Successful...!',
+                        text: 'Brand Details Added',
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                      })
+                }
+            })
 
     }
 

@@ -7,6 +7,7 @@ import AddProduct from "../components/AddProduct/AddProduct";
 import MyCart from "../components/MyCart/MyCart";
 import PrivateRoute from "./PrivateRoute";
 import BrandDetails from "../components/BrandDetails/BrandDetails";
+import EditBrand from "../components/EditBrand/EditBrand";
 
 const router = createBrowserRouter([
     {
@@ -19,13 +20,21 @@ const router = createBrowserRouter([
                 loader: () => fetch('/brands.json')
             },
             {
-                path: '/brandDetails/:brand_name',
+                path: 'brandDetails/:brand_name',
                 element: <BrandDetails></BrandDetails>,
-                loader: () => fetch('/brands.json')
+                loader: () => fetch('/brands.json'),
+                children:[
+                    
+                ]
             },
             {
-                path: '/addproduct',
-                element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
+                path: 'addproduct',
+                element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute> 
+            },
+            {
+                path: '/editBrand/:id',
+                element: <EditBrand></EditBrand>,
+                loader: ({params}) => fetch(`http://localhost:5000/brands/${params.id}`)
             },
             {
                 path: '/mycart',

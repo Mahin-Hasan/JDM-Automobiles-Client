@@ -3,7 +3,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import Brand from "../Brand/Brand";
 
 const BrandDetails = () => {
-    const brandInfo = useLoaderData();// for json data
+    //const brandInfo = useLoaderData();// for json data
     const { brand_name } = useParams();
     const brandNameLower = brand_name.toLowerCase();
 

@@ -8,7 +8,7 @@ const Home = () => {
     const brandLists = useLoaderData();
     // const { id } = brandLists
     // const brandList =
-    console.log(brandLists);
+    // console.log(brandLists);
 
 
     return (

@@ -51,7 +51,7 @@ const EditBrand = () => {
             <div className="text-center mb-6">
                 <h1 className="text-2xl sm:text-4xl uppercase text-stone-500 font-medium leading-none sm:leading-tight">Edit brand details of {carName}</h1>
             </div>
-            <div style={{ backgroundImage: `url(${updatebg})` }} className="bg-cover bg-center rounded-none sm:rounded-lg my-16">
+            <div style={{ backgroundImage: `url(${updatebg})`}} className="bg-cover bg-center rounded-none sm:rounded-lg my-16">
                 <div className="py-24">
                     <h1 className='text-amber-200 mb-12 text-center text sm:text-3xl'>Make necessary changes to the stored brands.</h1>
                     <div className="bg-white border-4 border-amber-700 p-14 max-w-4xl mx-auto">

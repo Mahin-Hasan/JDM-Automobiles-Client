@@ -7,8 +7,8 @@ const MyCart = () => {
     //fix state delete issue
     const [cartItems, setCartItems] = useState(addedItems)
 
-    console.log(addedItems);
     const { image, brandName, carName, carType, carPrice } = addedItems;
+    console.log(addedItems);
     return (
         <div>
             <h1>Total added products: {addedItems.length}</h1>

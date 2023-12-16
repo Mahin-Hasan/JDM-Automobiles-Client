@@ -7,18 +7,19 @@ const MyCart = () => {
     //fix state delete issue
     const [cartItems, setCartItems] = useState(addedItems)
 
-    const { image, brandName, carName, carType, carPrice } = addedItems;
-    console.log(addedItems);
+
     return (
         <div>
-            <h1>Total added products: {addedItems.length}</h1>
+            <div className="text-center mb-8 text-xl sm:text-2xl capitalize font-mono tracking-tighter">
+                <h2>Total added cart items <span className="text-purple-700 font-semibold">{cartItems.length}</span></h2>
+            </div>
             {
-                cartItems.map(item => <CartItem 
-                    key={item._id} 
+                cartItems.map(item => <CartItem
+                    key={item._id}
                     item={item}
                     cartItems={cartItems}
                     setCartItems={setCartItems}
-                    ></CartItem>)
+                ></CartItem>)
             }
         </div>
     );

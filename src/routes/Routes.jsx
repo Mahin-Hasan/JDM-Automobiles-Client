@@ -22,7 +22,7 @@ const router = createBrowserRouter([
             },
             {
                 path: 'brandDetails/:brand_name',
-                element: <BrandDetails></BrandDetails>,
+                element: <PrivateRoute><BrandDetails></BrandDetails></PrivateRoute>,
                 loader: () => fetch('/brands.json')
             },
             {
@@ -31,12 +31,12 @@ const router = createBrowserRouter([
             },
             {
                 path: '/editBrand/:id',
-                element: <EditBrand></EditBrand>,
+                element: <PrivateRoute><EditBrand></EditBrand></PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:5000/brands/${params.id}`)
             },
             {
                 path: '/fullDetails/:id',
-                element: <FullDetails></FullDetails>,
+                element: <PrivateRoute><FullDetails></FullDetails></PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:5000/brands/${params.id}`)
             },
             {

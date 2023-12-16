@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 
 const BrandCategory = ({ brand }) => {
     const { id, brand_image, brand_name } = brand;
-    console.log(brand);
     return (
         <div className="card p-2 card-side items-center bg-zinc-50 shadow-xl">
             <figure><img className="w-40" src={brand_image} alt="car logo" /></figure>

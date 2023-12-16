@@ -1,13 +1,14 @@
 import { useLoaderData } from "react-router-dom";
-import { FaShoppingCart } from "react-icons/fa";
+import { FaShoppingCart, FaDollarSign } from "react-icons/fa";
+import { IoIosStar } from "react-icons/io";
 import Swal from "sweetalert2";
 
 const FullDetails = () => {
     const brandDetails = useLoaderData();
     const { _id, image, brandName, carName, carRating, carType, carPrice, carDescription } = brandDetails;
     // console.log(_id, image, brandName, carName, carRating, carType, carPrice, carDescription);
-    const handleAddToCart = () =>{
-        const newCartItem = {image,brandName,carName, carType,carPrice};
+    const handleAddToCart = () => {
+        const newCartItem = { image, brandName, carName, carType, carPrice };
         console.log(newCartItem);
         //adding to cart
         fetch('http://localhost:5000/cart', {
@@ -32,19 +33,24 @@ const FullDetails = () => {
     }
 
     return (
-        <div className="card lg:card-side bg-base-100 shadow-xl">
-            <figure><img src={image} alt="car img" /></figure>
-            <div className="card-body">
-                <h2 className="card-title">Brand: {brandName}</h2>
-                <h3>Model: {carName}</h3>
-                <h3>User rating: {carRating} add star icon</h3>
-                <h3>Vehicle Category: {carType}</h3>
-                <h3>Price: {carPrice} add dollar icon</h3>
-                <h3 className="line-clamp-6">Additional Information: {carDescription}</h3>
-                <div className="card-actions justify-end">
-                    <button onClick={handleAddToCart} className="btn btn-primary"><FaShoppingCart />Add to cart</button>
+        <div className="h-screen flex items-center justify-center mt-10 lg:mt-0">
+            <div className="card lg:card-side bg-base-100 shadow-xl mx-2">
+                <figure><img className="w-[430px] h-full" src={image} alt="car img" /></figure>
+                <div className="card-body">
+                    <div className="flex-1 space-y-1">
+                        <h2 className="card-title text-purple-700 text-2xl">Brand: {brandName}</h2>
+                        <h3 className="text-xl ">Model: {carName}</h3>
+                        <h3 className="text-xl ">Vehicle Category: {carType}</h3>
+                        <span className="flex items-center text-xl"><h3>User rating: {carRating}</h3><IoIosStar className="text-amber-400" /></span>
+                        <span className="flex items-center text-xl"><h3>Price: {carPrice}</h3><FaDollarSign className="text-green-600" /></span>
+                        <span className="line-clamp-6 text-xl">Highlight: <span className="text-sm">{carDescription}</span></span>
+                    </div>
+                    <div className="card-actions justify-end">
+                        <button onClick={handleAddToCart} className="btn bg-fuchsia-800 hover:bg-fuchsia-700 text-indigo-50 font-semibold border-none rounded-md"><FaShoppingCart />Add to cart</button>
+                    </div>
                 </div>
             </div>
+           
         </div>
     );
 };

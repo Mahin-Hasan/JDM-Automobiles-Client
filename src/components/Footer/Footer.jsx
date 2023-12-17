@@ -34,7 +34,7 @@ const Footer = () => {
                                 <div className="flex space-x-3 text-3xl mb-10">
                                     <Link target="blank" to="https://www.facebook.com/mahin.hasan.750/"><FaFacebook className="text-blue-700" /></Link>
                                     <Link target="blank" to="https://twitter.com/Mahin_hsn"><FaTwitter className="text-sky-700" /></Link>
-                                    <Link target="blank" to="https://github.com/Mahin-Hasan"><FaGithub /></Link>
+                                    <Link target="blank" to="https://github.com/Mahin-Hasan"><FaGithub className="text-slate-800" /></Link>
                                     <Link target="blank" to="https://www.linkedin.com/in/mahin-hasan-/"><FaLinkedin className="text-sky-700" /></Link>
                                 </div>
                                 <p className="text-base font-semibold text-zinc-500">©2023, All rights reserved | Mahin Hasan</p>

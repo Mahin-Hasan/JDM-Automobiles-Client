@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { RxDotFilled } from 'react-icons/rx';
 import Brand from "../Brand/Brand";
 
 const BrandDetails = () => {
-    //const brandInfo = useLoaderData();// for json data
     const { brand_name } = useParams();
     const brandNameLower = brand_name.toLowerCase();
 

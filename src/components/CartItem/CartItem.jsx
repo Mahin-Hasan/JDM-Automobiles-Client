@@ -1,5 +1,6 @@
 import Swal from "sweetalert2";
 import { ImCross } from "react-icons/im";
+import { FaDollarSign } from "react-icons/fa";
 
 
 
@@ -34,7 +35,6 @@ const CartItem = ({ item, cartItems, setCartItems }) => {
                                 icon: "success"
                             })
                             const leftOvers = cartItems.filter(cart => cart._id !== _id);
-                            console.log(leftOvers);
                             setCartItems(leftOvers);
                         }
                     })
@@ -46,16 +46,16 @@ const CartItem = ({ item, cartItems, setCartItems }) => {
         <div className="flex justify-center">
             <div className="flex border-2 border-purple-700 rounded-2xl gap-4 mx-2 mb-3">
                 <div>
-                    <img className="w-[180px] h-[140px] rounded-s-xl" src={image} alt="" />
+                    <img className="w-[180px] sm:w-[220px] h-[140px] sm:h-[160px] rounded-s-xl" src={image} alt="car image" />
                 </div>
-                <div className="w-36">
-                    <h1>{brandName}</h1>
-                    <h2>{carName}</h2>
-                    <h2>{carPrice}</h2>
-                    <h2>{carType}</h2>
+                <div className="w-36 text-base sm:text-lg font-semibold">
+                    <h1 className="text-purple-700">{brandName}</h1>
+                    <h2 className="text-neutral-500">{carName}</h2>
+                    <span className="flex items-center text-neutral-500"><p>{carPrice}</p><FaDollarSign className="text-green-600" /></span>
+                    <h2 className="text-neutral-500">{carType}</h2>
                 </div>
-                <div className="flex items-center me-4">
-                    <button onClick={() => handleDelete(_id)} className="btn btn-outline btn-error"><ImCross /></button>
+                <div className="flex items-center">
+                    <button onClick={() => handleDelete(_id)} className="btn bg-[#db545a] hover:bg-rose-700 rounded-s-none rounded-e-xl text-lg text-white hover:text-black font-normal border-0 h-full"><ImCross /></button>
                 </div>
             </div>
         </div>

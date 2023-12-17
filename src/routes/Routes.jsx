@@ -9,11 +9,13 @@ import PrivateRoute from "./PrivateRoute";
 import BrandDetails from "../components/BrandDetails/BrandDetails";
 import EditBrand from "../components/EditBrand/EditBrand";
 import FullDetails from "../components/FullDetails/FullDetails";
+import ErrorPage from "../components/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Root></Root>,
+        errorElement: <ErrorPage />,
         children: [
             {
                 path: '/',
@@ -27,17 +29,17 @@ const router = createBrowserRouter([
             },
             {
                 path: 'addproduct',
-                element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute> 
+                element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
             },
             {
                 path: '/editBrand/:id',
                 element: <PrivateRoute><EditBrand></EditBrand></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/brands/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/brands/${params.id}`)
             },
             {
                 path: '/fullDetails/:id',
                 element: <PrivateRoute><FullDetails></FullDetails></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/brands/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/brands/${params.id}`)
             },
             {
                 path: '/mycart',

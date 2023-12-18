@@ -45,9 +45,9 @@ const AddProduct = () => {
 
 
     return (
-        <section className="container mx-auto">
+        <section className="container mb-20 mx-auto">
             <div className="text-center mb-6">
-                <h1 className="text-2xl sm:text-4xl  uppercase text-stone-500 font-medium leading-none sm:leading-tight">Add your brand</h1>
+                <h1 className="text-2xl sm:text-4xl mt-20 uppercase text-stone-500 font-medium leading-none sm:leading-tight">Add your brand</h1>
             </div>
             <div style={{ backgroundImage: `url(${formbg})` }} className="bg-cover bg-center rounded-none sm:rounded-lg my-16">
                 <div className="py-24">

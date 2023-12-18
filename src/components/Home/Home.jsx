@@ -10,16 +10,10 @@ import { MdDarkMode } from "react-icons/md";
 import { FaLightbulb } from "react-icons/fa6";
 
 
-// <CiLight />
-// <MdDarkMode />
 
 
 const Home = () => {
     const brandLists = useLoaderData();
-    // const { id } = brandLists
-    // const brandList =
-    // console.log(brandLists);
-
     const [isDarkMode, setIsDarkMode] = useState(false);
     const handleToggle = () => {
         setIsDarkMode((prevMode) => !prevMode);
@@ -28,11 +22,13 @@ const Home = () => {
 
     return (
         <main data-theme={`${isDarkMode ? "dark" : "light"}`} className='dark:bg-natural-900 relative'>
-            <button onClick={handleToggle} className={`absolute top-3 left-6 text-lg  text-${isDarkMode ? 'dark' : 'light'} ${isDarkMode ? 'btn btn-neutral text-white' : 'btn text-black'}  `}>
-                {
-                    isDarkMode ? <MdDarkMode /> : <FaLightbulb />
-                }
-            </button>
+            <div className='sticky top-0'>
+                <button onClick={handleToggle} className={`absolute top-3 left-6 text-lg  text-${isDarkMode ? 'dark' : 'light'} ${isDarkMode ? 'btn btn-neutral text-white' : 'btn text-black'}  `}>
+                    {
+                        isDarkMode ? <MdDarkMode /> : <FaLightbulb />
+                    }
+                </button>
+            </div>
             <section style={{ backgroundImage: `url(${banner})` }} className="bg-cover flex justify-end bg-center h-screen mb-20">
                 <div className="mr-8 sm:mr-16 md:mr-28 lg:mr-40 text-end pt-10 md:pt-16 lg:pt-36 w-full md:w-1/2 space-y-6">
                     <h1 className='text-5xl uppercase font-semibold'><span className="text-indigo-50">get your</span> <br /><span className="text-fuchsia-600">dream car</span></h1>
@@ -43,7 +39,7 @@ const Home = () => {
             {/* add 6 categories */}
             <section>
                 <div className="text-center px-6 sm:px-20 md:px-36 mb-10">
-                    
+
                     <h1 className="text-xl sm:text-3xl md:text-5xl font-semibold  text-fuchsia-800 mb-6">Are you in search for a new car?</h1>
                     <p className={`${isDarkMode ? 'text-white' : 'text-black'}`}>Experience automotive excellence at its finest with JDM Automobiles. Our curated selection of cars combines cutting-edge technology and sleek design for an unparalleled driving experience. From fuel-efficient compacts to luxurious SUVs, we have the perfect vehicle for every lifestyle. Choose JDM Automobiles for quality, reliability, and exceptional service. Elevate your drive with us - where excellence meets the road. Look no further, We provide wide collection of japanese cars ranging from various brands.</p>
                 </div>
@@ -74,7 +70,10 @@ const Home = () => {
                             </div>
                             <div className="w-full md:w-2/4 ps-4 space-y-2 py-4">
                                 <h1 className="text-orange-50 text-xl">Check Out Civic Trims</h1>
-                                <button className="btn px-6 rounded-none bg-[#db545a] text-lg text-white font-normal border-0">See Details</button>
+                                <Link target='blank' to="https://www.honda.com/">
+                                    <button className="btn px-6 rounded-none bg-[#db545a] text-lg text-white font-normal border-0">See Details</button>
+                                </Link>
+
                             </div>
                         </div>
                         <div className="flex flex-col md:flex-row items-center bg-[#db545a]">
@@ -93,7 +92,7 @@ const Home = () => {
             </section>
 
             {/* add faq */}
-            <section>
+            <section className='pb-20'>
                 <div className="flex justify-center flex-col md:flex-row gap-10">
                     <div className='w-full md:w-2/5 lg:w-1/4 xl:w-1/5 px-24 sm:px-40 md:px-0'>
                         {/* add img */}
@@ -103,7 +102,7 @@ const Home = () => {
                         {/* faq */}
                         <div className='text-center mb-10'>
                             <h1 className='uppercase text-5xl font-semibold text-fuchsia-800 mb-4'>faq</h1>
-                            <p className='capitalize font-semibold text-zinc-500'>some frequently asked question</p>
+                            <p className={`${isDarkMode ? 'text-zinc-300 capitalize font-semibold' : 'text-zinc-600 capitalize font-semibold'}`}>some frequently asked question</p>
                         </div>
                         <div>
                             <div className="collapse collapse-arrow bg-stone-100">

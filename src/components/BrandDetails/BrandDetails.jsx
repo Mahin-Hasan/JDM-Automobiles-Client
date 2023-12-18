@@ -57,9 +57,8 @@ const BrandDetails = () => {
 
 
     return (
-        <div className="mx-2">
+        <div className="mx-2 my-16">
             <div className="container mx-auto">
-
                 {/* trying slider */}
                 <div className="relative">
                     <div className='h-[780px] w-full m-auto pt-4 pb-16 relative group'>

@@ -16,7 +16,6 @@ const Login = () => {
 
     //try login
     const handleLogin = (event) => {
-        console.log('working');
         event.preventDefault()
         const email = event.target.email.value;
         const password = event.target.password.value;

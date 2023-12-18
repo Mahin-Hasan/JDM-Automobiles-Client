@@ -9,7 +9,7 @@ const Root = () => {
         <div>
             <span className="hidden"><DarkModeToggle></DarkModeToggle>
             </span>
-            <div>
+            <div className="bg-slate-800">
                 <Navbar></Navbar>
             </div>
             <div>

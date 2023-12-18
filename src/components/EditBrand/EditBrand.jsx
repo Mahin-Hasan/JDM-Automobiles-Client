@@ -47,7 +47,7 @@ const EditBrand = () => {
 
 
     return (
-        <section className="container mx-auto">
+        <section className="container my-20 mx-auto">
             <div className="text-center mb-6">
                 <h1 className="text-2xl sm:text-4xl uppercase text-stone-500 font-medium leading-none sm:leading-tight">Edit brand details of {carName}</h1>
             </div>

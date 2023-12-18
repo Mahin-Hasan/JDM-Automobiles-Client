@@ -6,8 +6,6 @@ import { FaDollarSign } from "react-icons/fa";
 
 const CartItem = ({ item, cartItems, setCartItems }) => {
     const { _id, image, brandName, carName, carPrice, carType } = item;
-    console.log(item);
-    console.log(_id);
 
     //try delete implementation
     const handleDelete = _id => {
@@ -31,7 +29,7 @@ const CartItem = ({ item, cartItems, setCartItems }) => {
                         if (data.deletedCount > 0) {
                             Swal.fire({
                                 title: "Deleted!",
-                                text: "Your COffee has been deleted.",
+                                text: "Your added car has been deleted.",
                                 icon: "success"
                             })
                             const leftOvers = cartItems.filter(cart => cart._id !== _id);

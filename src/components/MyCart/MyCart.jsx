@@ -9,9 +9,9 @@ const MyCart = () => {
 
 
     return (
-        <div>
+        <div className="mb-20">
             <div className="text-center mb-8 text-xl sm:text-2xl capitalize font-mono tracking-tighter">
-                <h2>Total added cart items <span className="text-purple-700 font-semibold">{cartItems.length}</span></h2>
+                <h2 className="my-10">Total added cart items <span className="text-purple-700 font-semibold">{cartItems.length}</span></h2>
             </div>
             {
                 cartItems.map(item => <CartItem

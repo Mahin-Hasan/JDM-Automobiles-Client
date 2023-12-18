@@ -11,7 +11,7 @@ const FullDetails = () => {
         const newCartItem = { image, brandName, carName, carType, carPrice };
         console.log(newCartItem);
         //adding to cart
-        fetch('http://localhost:5000/cart', {
+        fetch('https://jdm-automobiles-server.onrender.com/cart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

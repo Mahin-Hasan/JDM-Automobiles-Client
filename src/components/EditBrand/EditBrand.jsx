@@ -23,7 +23,7 @@ const EditBrand = () => {
         console.log(editedCar);
 
         //update previous stored details
-        fetch(`http://localhost:5000/brands/${_id}`, {
+        fetch(`https://jdm-automobiles-server.onrender.com/brands/${_id}`, {
             method: 'PUT', 
             headers: {
                 'content-type': 'application/json'

@@ -34,17 +34,17 @@ const router = createBrowserRouter([
             {
                 path: '/editBrand/:id',
                 element: <PrivateRoute><EditBrand></EditBrand></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/brands/${params.id}`)
+                loader: ({ params }) => fetch(`https://jdm-automobiles-server.onrender.com/brands/${params.id}`)
             },
             {
                 path: '/fullDetails/:id',
                 element: <PrivateRoute><FullDetails></FullDetails></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/brands/${params.id}`)
+                loader: ({ params }) => fetch(`https://jdm-automobiles-server.onrender.com/brands/${params.id}`)
             },
             {
                 path: '/mycart',
                 element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
-                loader: () => fetch('http://localhost:5000/cart')
+                loader: () => fetch('https://jdm-automobiles-server.onrender.com/cart')
             },
             {
                 path: '/login',

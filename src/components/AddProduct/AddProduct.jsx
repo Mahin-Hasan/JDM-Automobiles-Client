@@ -21,7 +21,7 @@ const AddProduct = () => {
         console.log(newCar);
 
         // add brand details to database
-        fetch('http://localhost:5000/brands', {
+        fetch('https://jdm-automobiles-server.onrender.com/brands', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
